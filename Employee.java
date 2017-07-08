@@ -2,12 +2,15 @@ import java.util.Scanner;
 
 public class Employee
 {
-	public static void main(String[]args)
+    private Address address;
+    private Name name;
+    private Date date;
+    
+    public static void main(String[]args)
 	{
 		int employeeNumber = 0;
 		/**String Name.*/
 		String name = ""; 
-		String address = " ";
 		int hireMonth = 0;
 		int hireDay = 0;
 		int hireYear = 0;			
@@ -20,9 +23,10 @@ public class Employee
         Employee[] employees = new Employee[numofEmployees];
         	
         /**Read in the data from each of the employees.*/
-    		
         for(int i = 0; i <numofEmployees; i++)
         {
+            employees[i] = new Employee();
+
         	System.out.println("Enter Employee Number:");
         	int employeeID = input.nextInt();
         		
@@ -33,10 +37,10 @@ public class Employee
         	String lastName = input.nextLine();
         	
         	name = firstName + " " + lastName;
-        		
+
         	System.out.println("Enter Street:");
         	String street = input.nextLine();
-        		
+
         	System.out.println("Enter City:");
             String city = input.nextLine();
             	
@@ -44,9 +48,10 @@ public class Employee
             String state = input.nextLine();
             	
             System.out.println("Enter Zip Code:");
-            String zip = input.nextLine();
+            int zip = input.nextInt();
             
-            address = street + " " + city + " " + state + " " + zip;
+            employees[i].address = new Address(street, city, state, zip);
+            // address = street + " " + city + " " + state + " " + zip;
             	
             System.out.println("Enter Hire Month Date (1-12):");
             int month = input.nextInt();
@@ -57,15 +62,24 @@ public class Employee
             System.out.println("Enter Hire Year Date (1900-2020):");
             int year = input.nextInt();
             
+            employees[i].date = new Date(hireMonth, hireDay, hireYear);
+            
             
             	
             input.nextLine();
             }
-        System.out.println("Employee #:" + "  "  + employeeNumber + 
-        		"Employee Name: " + " " + name + "Address: " + " " + address);
+
+            /*System.out.println("Employee #:" + "  "  + employeeNumber + 
+        		"Employee Name: " + " " + name + "Address: " + " " + address.toString());*/
+
+        for(int i = 0; i <numofEmployees; i++)
+        {
+            System.out.println("Name: " + " "  +employees[i].name.toString() + " " + "Addresss: " + " " + 
+        employees[i].address.toString() + " " + employees[i].date.toString());
+        }
+
 	}
 }
-
          	
             
         
