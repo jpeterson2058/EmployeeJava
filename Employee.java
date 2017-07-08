@@ -29,6 +29,8 @@ public class Employee
 
         	System.out.println("Enter Employee Number:");
         	int employeeID = input.nextInt();
+        	
+        	
         		
         	System.out.println("Enter Employee First Name:");
         	String firstName = input.nextLine();
@@ -36,7 +38,7 @@ public class Employee
         	System.out.println("Enter Employee Last Name:");
         	String lastName = input.nextLine();
         	
-        	name = firstName + " " + lastName;
+        	employees[i].name = new Name(firstName,lastName);
 
         	System.out.println("Enter Street:");
         	String street = input.nextLine();
@@ -74,8 +76,8 @@ public class Employee
 
         for(int i = 0; i <numofEmployees; i++)
         {
-            System.out.println("Name: " + " "  +employees[i].name.toString() + " " + "Addresss: " + " " + 
-        employees[i].address.toString() + " " + employees[i].date.toString());
+            System.out.println( employees[i].name.toString() +
+            employees[i].address.toString() + employees[i].date.toString());
         }
 
 	}
