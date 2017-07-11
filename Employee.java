@@ -29,8 +29,7 @@ public class Employee
 
         	System.out.println("Enter Employee Number:");
         	int employeeID = input.nextInt();
-        	
-        	
+        	input.nextLine();
         		
         	System.out.println("Enter Employee First Name:");
         	String firstName = input.nextLine();
@@ -64,7 +63,7 @@ public class Employee
             System.out.println("Enter Hire Year Date (1900-2020):");
             int year = input.nextInt();
             
-            employees[i].date = new Date(hireMonth, hireDay, hireYear);
+            employees[i].date = new Date(month, day, year);
             
             
             	
@@ -76,8 +75,8 @@ public class Employee
 
         for(int i = 0; i <numofEmployees; i++)
         {
-            System.out.println( employees[i].name.toString() +
-            employees[i].address.toString() + employees[i].date.toString());
+            System.out.println( employees[i].name.toString() + " " +
+            employees[i].address.toString() + " " + employees[i].date.toString());
         }
 
 	}

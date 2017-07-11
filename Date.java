@@ -62,9 +62,9 @@ public boolean setHireMonth(int newHireMonth)
 {
 	if (hireMonth>=1 || hireMonth<=12)
 	{
+		hireMonth = newHireMonth;
 		return true;
 	}
-	hireMonth = newHireMonth;
 	return false;
 }
 
@@ -72,9 +72,9 @@ public boolean setHireDay(int newHireDay)
 {
 	if (hireDay>=1 || hireDay<=31)
 	{
+		hireDay = newHireDay;
 		return true;
 	}
-	hireDay = newHireDay;
 	return false;
 }
 
@@ -82,9 +82,9 @@ public boolean setHireYear(int newHireYear)
 {
 	if (hireYear>=1900 || hireYear<=2020)
 	{
+		hireYear = newHireYear;
 		return true;
 	}
-	hireYear = newHireYear;
 	return false;
 	}
 
