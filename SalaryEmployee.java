@@ -1,15 +1,21 @@
-import java.util.Set;
+
 
 public class SalaryEmployee extends Employee 
 {
-	private double weeklySalary;
+	/**Constructor
+	 * 
+	 * @param hourlyRate the employee's weekly salary
+	 */
+	private double weeklySalary; //Establishes weekly salary
 
-	public SalaryEmployee(String firstName, String lastName, double salary) 
+	public SalaryEmployee(String name, String address, String date, double salary) 
 	{
-		super ();
+		super();
 		setWeeklySalary(salary);
 	}
 	
+
+	/** Setter & getter function for salary*/
 	public void setWeeklySalary(double salary) 
 	{
 		weeklySalary = salary <0.0 ? 0.0 : salary;
@@ -26,8 +32,7 @@ public class SalaryEmployee extends Employee
 	
 	public String toString()
 	{
-		return String.format("salaried employee: %s\n%s: $%,. 2f",
-				super.toString(), "weekly salary", getWeeklySalary() );
+		return "salaried employee:" + super.toString();
 	}
 
 }

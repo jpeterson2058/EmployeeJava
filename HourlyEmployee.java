@@ -1,5 +1,5 @@
 
-class HourlyEmployee extends Employee 
+public class HourlyEmployee extends Employee 
 {
 	/**Constructor
 	 * 
@@ -9,7 +9,7 @@ class HourlyEmployee extends Employee
 	private double wage; //establishes wage/hour
 	private double hours;//establishes hours worked/week
 	
-	public HourlyEmployee(String firstName, String lastName, 
+	public HourlyEmployee(String name, String address, String date, 
 			double hourlyRate, double hoursWorked) 
 	{
 		super();
@@ -51,9 +51,7 @@ class HourlyEmployee extends Employee
 	
 	public String toString()
 	{
-		return String.format("hourly employee: %s\n%s: $%,.2f; %s: %,.2f",
-				super.toString(), "hourly wage" , getWage(),
-				"hours worked", getHours());
+		return "Hourly employees" + super.toString();
 	}
 
 }
