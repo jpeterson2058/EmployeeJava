@@ -2,10 +2,19 @@ import java.util.Scanner;
 
 public class Employee
 {
-    private Address address;
-    private Name name;
-    private Date date;
-    
+    protected Address address;
+    protected Name name;
+    protected Date date;
+ 
+    public Employee(Name myName, Address myAddress, Date myDate)
+    {
+        name    = myName;
+        address = myAddress;
+        date    = myDate;
+    }
+
+    public Employee() {};
+
     public static void main(String[]args)
 	{
 		int employeeNumber = 0;

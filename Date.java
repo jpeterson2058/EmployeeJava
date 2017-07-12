@@ -35,6 +35,14 @@ public Date (Date otherDate)
 	hireYear = otherDate.hireYear;
 	}
 
+public Date ()
+{
+	hireMonth = 0;
+	hireDay = 0;
+	hireYear = 0;
+}
+
+
 /**Implementing Getter method which provides public, indirect access to values
  * inside the private instance variables.
  */

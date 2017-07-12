@@ -17,7 +17,7 @@ public class Name
  * @param newLastName
  * @param newFirstName
  */
-public Name (String newLastName, String newFirstName)
+public Name (String newFirstName, String newLastName)
 {
 	firstName = newFirstName;
 	lastName = newLastName;
@@ -76,7 +76,7 @@ public boolean setFirstName(String newFirstName)
 
 public String toString()
 {
-	return "First Name:" + " " + firstName + "Last Name:" + " " + lastName; 
+	return firstName + " " + lastName; 
 }
 }
 

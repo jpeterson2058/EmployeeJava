@@ -8,9 +8,9 @@ public class SalaryEmployee extends Employee
 	 */
 	private double weeklySalary; //Establishes weekly salary
 
-	public SalaryEmployee(String name, String address, String date, double salary) 
+	public SalaryEmployee(Name name, Address address, Date date, double salary) 
 	{
-		super();
+		super(name, address, date);
 		setWeeklySalary(salary);
 	}
 	

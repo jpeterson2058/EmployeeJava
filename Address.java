@@ -41,6 +41,14 @@ public Address (Address otherAddress)
 	zipAddress = otherAddress.zipAddress;
 	}
 
+public Address()
+{
+    streetAddress = "No Street";
+	cityAddress = "No City";
+	stateAddress = "No State";
+	zipAddress = 0;
+}
+
 /**Implementing Getter method which provides public, indirect access to values
  * inside the private instance variables.
  */

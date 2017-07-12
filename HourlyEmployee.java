@@ -9,10 +9,10 @@ public class HourlyEmployee extends Employee
 	private double wage; //establishes wage/hour
 	private double hours;//establishes hours worked/week
 	
-	public HourlyEmployee(String name, String address, String date, 
+	public HourlyEmployee(Name name, Address address, Date date, 
 			double hourlyRate, double hoursWorked) 
 	{
-		super();
+		super(name, address, date);
 		setWage(hourlyRate); 
 		setHours(hoursWorked); 
 	}
